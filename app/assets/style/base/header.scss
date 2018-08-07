@@ -1,0 +1,55 @@
+.header {
+  background-color: #01321b;
+  padding: 30px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  &-title {
+    color: #fff;
+    float: left;
+    h1 {
+      font-size: 4rem;
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      font-size: 2rem;
+      margin-top: 10px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  &-menu {
+    font-size: 1.4rem;
+    padding: 2rem;
+    float: right;
+    li {
+      float: left;
+      position: relative;
+      display: block;
+      padding: 0 20px;
+      &:hover {
+        border-bottom: 1px solid gray;
+        padding-bottom: 5px;
+      }
+      a {
+        padding: 5px 10px;
+        color: #fff;
+        &:hover {
+          color: gray;
+        }
+      }
+    }
+    .active a {
+      color: gray;
+    }
+  }
+  &-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+}
