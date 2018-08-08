@@ -1,41 +1,32 @@
-// var testObject = { 'one': 1, 'two': 2, 'three': 3 };
-
-// // Put the object into storage
-// localStorage.setItem('testObject', JSON.stringify(testObject));
-
-// // Retrieve the object from storage
-// var retrievedObject = localStorage.getItem('testObject');
-
-// console.log('retrievedObject: ', JSON.parse(retrievedObject));
-
-
-var CurdList = (function () {
+var ScrollSmooth = (function () {
   'use strict';
-  function CurdList(message) {
-    this.greeting = message;
-    this.d = window.document;
-    var originStore = '{"1": {"name": "Hau"},"2": {"name": "Thy"},"3": {"name": "Toan"}]';
-    this.setStore("devlist", originStore);
+  function ScrollSmooth(message) {
     this.init();
   }
 
-  CurdList.prototype.init = function () {
-    this.addItem();
-    this.removeAllItems();
-    this.addEventRemoveForItems();
-    // this.addEventEditForItems();
+  ScrollSmooth.prototype.init = function () {
+   this.Scroll();
   }
 
 
-  CurdList.prototype.getStore = function (storeName) {
+  ScrollSmooth.prototype.Scroll = function () {
+    $('#fullpage').fullpage({
+      sectionSelector: '.vertical-scrolling',
+      scrollingSpeed: 1000,
+      navigation: true,
+      slidesNavigation: true,
+      controlArrows: false,
+      menu: '#menu',
+      anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection']  
+    }); 
     
   }
 
 
-  return CurdList;
+  return ScrollSmooth;
 }());
 
 // instance
 window.addEventListener('DOMContentLoaded', function () {
-  var mangageList = new CurdList();
+  var mangageList = new ScrollSmooth();
 });

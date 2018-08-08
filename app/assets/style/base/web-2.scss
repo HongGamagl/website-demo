@@ -1,0 +1,65 @@
+/* SECTION STYLES */
+section { 
+	text-align: center;
+}
+#section0{
+  background:#c98b82;
+}
+#section1{
+  background: #6191ad;
+}
+#section2{
+  background:#ac6f76;  
+}
+#section3{
+  background: #615017;
+}
+
+h2 {
+	font-size: 4em;
+	margin-bottom: 20px;
+}
+/*MENU*/
+#menu{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 70;  
+  font-size: 1.8rem;
+	li{
+		float: left;
+		color: #fff;		
+		a{
+			color: #fff;
+			text-decoration: none;
+			padding: 0 20px;
+			&:hover{
+				background:#fff;
+				color: #000;
+			}			
+		}
+	}
+}
+nav li.active a,
+body.fp-viewing-fifthSection-1 #menu li:last-child a {
+  background: #453659;
+}
+/* SLIDENAV STYLES - fullPage.js  */
+#fp-nav ul li a span, 
+.fp-slidesNav ul li a span {
+	background: white;
+	width: 8px;
+	height: 8px;
+	margin: -4px 0 0 -4px;
+}
+
+#fp-nav ul li a.active span, 
+.fp-slidesNav ul li a.active span, 
+#fp-nav ul li:hover a.active span, 
+.fp-slidesNav ul li:hover a.active span {
+	width: 10px;
+	height: 10px;
+	margin: -4px 0 0 -4px;
+	background: black;
+	box-sizing: border-box;	
+}
